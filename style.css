@@ -9,6 +9,7 @@
 
 body {
     overflow-x: hidden;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .hero-header {
@@ -51,12 +52,14 @@ header {
     margin-right: 5px;
     cursor: pointer;
     text-align: center;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .logo .logo-text {
     font-size: 24px;
     font-weight: 500;
     color: #fff;
+    transition: color 0.3s;
 }
 
 nav .togglebtn {
@@ -91,6 +94,11 @@ nav .navlinks li {
 nav .navlinks li a {
     color: #e5e5e5;
     margin-right: 2.5rem;
+    transition: font-size 0.3s, color 0.3s;
+}
+
+nav .navlinks li a:hover {
+    font-size: 1.1rem;
 }
 
 .container {
@@ -130,6 +138,7 @@ nav .navlinks li a {
 .hero-text h5 {
     color: #e5e5e5;
     font-size: 14px;
+    transition: color 0.3s;
 }
 
 .hero-text h5 span {
@@ -144,6 +153,7 @@ nav .navlinks li a {
 
 .hero-text p {
     color: #e5e5e5;
+    transition: color 0.3s;
 }
 
 .btn-group {
@@ -160,6 +170,7 @@ nav .navlinks li a {
     border-radius: 30px;
     border: 2px solid #e5e5e5;
     box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .btn.active {
@@ -170,7 +181,7 @@ nav .navlinks li a {
     color: #e5e5e5;
     font-size: 18px;
     margin-right: 10px;
-    transition: 0.5s;
+    transition: color 0.5s, transform 0.5s;
 }
 
 .hero-text .social i:hover {
