@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pranjal's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!----Font awesome cdn  font icon css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-p"></i>
+                    <div class="logo-text">Pranjal Gaur</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Resume</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                <div class="hero-pic">
+                    <img src="images/main_photo.jpg" alt="profile pic">
+                    <button class="theme-toggle-btn">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                </div>
+                <div class="hero-text">
+                    <h5>Hi I'm a <span class="input"></span></h5>
+                    <h1>Pranjal Gaur</h1>
+                    <p> A Junior Undergraduate student at IIT Gandhinagar, pursuing B.Tech in Computer Science and Engineering.
+                        <br>
+                          I am passionate about learning new technologies and implementing them in real-world projects.
+                           I am always eager to learn new things and explore new opportunities.
+                    </p>
+    
+                    <div class="btn-group">
+                        <a href="#" class="btn active">Download CV</a>
+                        <a href="#" class="btn">Contact</a>
+                    </div>
+    
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+     <!---typed js for typing text effect-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+        /** creating button click show hide navbar **/
+        
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlinks");
+        var links = document.querySelectorAll(".navlinks li");
+
+        togglebtn.addEventListener("click", function () {
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        });
+
+        var typed = new Typed(".input", {
+            strings: ["ML enthusiast", "Algorithm master", "Web Developer"],
+            typeSpeed: 70,
+            backSpeed: 55,
+            loop: true
+        });
+
+        /** theme toggle **/
+        var themeToggleBtn = document.querySelector(".theme-toggle-btn");
+        var body = document.body;
+
+        themeToggleBtn.addEventListener("click", function () {
+            body.classList.toggle("light-theme");
+            var icon = themeToggleBtn.querySelector("i");
+            if (body.classList.contains("light-theme")) {
+                icon.classList.remove("fa-moon");
+                icon.classList.add("fa-sun");
+            } else {
+                icon.classList.remove("fa-sun");
+                icon.classList.add("fa-moon");
+            }
+        });
+
+    </script>
+
+</body>
+</html>
